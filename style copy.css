@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    border:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height:100dvh; 
+    width:100dvw;
+    font-family: 'Courier New', Courier, monospace;
+}
+@font-face {
+    font-family: ticketing;
+    src: url(TICKETING/Ticketing.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: joystix;
+    src: url(joystix\ monospace.otf);
+}
+.header{
+    width: 100%;
+    height: clamp(3.236rem, 8.09vw, 5.663rem);
+    background-color: #f0f0f0;
+    display: block;
+    position: fixed;
+    top: 0;
+}
+.title{
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-family: ticketing;
+    padding-left: min(10px, 2%);
+    padding-top: min(7.5px, 1.5%);
+    display: inline-block;
+    position: relative;
+    top: clamp(0.8rem, 1.3dvh, 1.5rem);
+}
+
+.subtitle{
+    font-size: clamp(1rem, 3.09vw, 1.618rem);
+    font-family: ticketing;
+    padding-left: min(3px, 1.8%);
+    padding-top: min(7.5px, 1.5%);
+    display: inline-block;
+    position:relative;
+    top: clamp(0.8rem, 1.3dvh, 1.5rem);
+}
+nav{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding-right: min(30px, 4%);
+    background-color: #f0f0f0;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    font-size: clamp(0.5rem, 1vw, 0.8rem);
+    font-family: joystix;
+    position: relative;
+    bottom: clamp(1.8rem, calc(2.8vw + 0.45rem) ,2.2rem);
+
+}
+nav ul button{
+    display: inline-block;
+    align-items: center;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    color:black;
+    font-family: joystix;
+    font-size: clamp(0.5rem, 1vw, 0.8rem);
+}
+.home_button:hover{
+    background-color: #ffaaaa;
+    border-color: #dd0000;
+    color: #f3f3f3;
+    transition: background-color 0.3s ease;
+
+}
+.design_button:hover{
+    background-color: #ffffaa;
+    border-color: #ffff00;
+    color: #f3f3f3;
+    transition: background-color 0.3s ease;
+}
+
+.product_button:hover{
+    background-color: #aaffaa;
+    border-color: #00dd00;
+    color: #f3f3f3;
+    transition: background-color 0.3s ease;
+
+}
+
+.home_button{
+    margin-right: 1rem;
+    background-color: #ff8787;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #bb0000;
+    border-radius: 1px;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.design_button{
+    background-color: #ffff87;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ffee00;
+    border-radius: 1px;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem
+}
+.product_button{
+    margin-left: 1rem;
+    background-color: #87ff87;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #00aa00;
+    border-radius: 1px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
