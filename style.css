@@ -7,7 +7,8 @@
 
 body{
     max-width: 100%;
-    height: 100dvh; 
+    min-height: 100dvh;
+    height: 100%; 
     width:100dvw;
     font-family: 'Courier New', Courier, monospace;
     background-color: #08a4a3;
