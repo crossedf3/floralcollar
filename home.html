@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>floralcollar!</title>
     <link rel="stylesheet" href="style.css">
+<style>
+    .photo{
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    width: 21%;
+    height: 28%;
+}
+</style>
 </head>
 <body>
     <header class="header">
@@ -12,12 +22,13 @@
         <h2 class="subtitle">by NotPandawara!</h2>
         <nav>
             <ul>
-                <button class="home_button">Home</button>
-                <button class="design_button">Design</button>
-                <button class="product_button">Product</button>
+                <button class="home_button" class="nav-links">Home</button>
+                <button class="design_button" class="nav-links">Design</button>
+                <button class="product_button" class="nav-links">Product</button>
             </ul>
         </nav>
      <img src="floralcollar.png" alt="floralcollar logo" class="logo">
+      <img src="menus.png" alt="hamburger" class="hamburger">
     </header>
 
     <main>
@@ -29,8 +40,11 @@
             <h2>Welcome to Our Passion Project!</h2>
             <p>...no we don't do cleaning and stuff but we do love nature!</p>
             </div>
+            <img src="poinsettia.png" id="poinsettia">
         </section>
 
+         
+        
         <section id="about">
             <div class="about_bar">
                 <h3>introduce.exe</h3>
@@ -41,8 +55,23 @@
             <p>Who's who? well, let us introduce ourselves!</p>
             </div>
         </section>
-
+        <div class="card" tabindex="0" role="button" aria-pressed="false" aria-label="Cycle through images and descriptions" id="cycleCard">
+            <p>Click to change!</p>
+            <img id="cycleImage" src="biel.jpeg" alt="biel" tabindex="0" />
+            <p id="namings">Gabriel Rainhard W.</p>
+            <p id="jobdesk">Content Writer</p>
+        </div>
+        <section id="additional">
+            <div class="additional_bar">
+                <h3>design.exe</h3>
+            </div>
+            <div class="additional">
+            <h2>It's about the process, not the destination</h2>
+            <p>...but it's also about the aesthetic, theming, message, blah blah blah you name it.</p>
+            </div>
+    </main>
     <script>
+    (() => {
         document.querySelector('.home_button').addEventListener('click', function() {
             window.location.href = 'home.html';
         });
@@ -54,6 +83,71 @@
         document.querySelector('.product_button').addEventListener('click', function() {
             window.location.href = 'product.html';
         });
+    })();
+    (() => {
+        const items = [
+            {
+                src: "biel.jpeg",
+                alt: "biel",
+                namings: "Gabriel Rainhard W.",
+                jobdesk: "Content Writer"
+            },
+            {
+                src: "lino.jpeg",
+                alt: "lino",
+                namings: "Eulogius Ravelino C.F",
+                jobdesk: "Game Developer"
+            },
+            {
+                src: "bhaga.jpeg",
+                alt: "bhaga",
+                namings: "D.G.A. Bhagawanta Rajasa",
+                jobdesk: "Graphic Designer"
+            },
+            {
+                src: "feli.jpeg",
+                alt: "feli",
+                namings: "Felicia Ceysa P.",
+                jobdesk: "Web Programmer"
+            },
+            {
+                src: "tina.jpeg",
+                alt: "tina",
+                namings: "Seftia Ramadhani",
+                jobdesk: "General Programmer"
+            },
+            {
+                src: "syahza.jpg",
+                alt: "syahza",
+                namings: "Syahza Aisyah P.",
+                jobdesk: "Web Programmer",
+            }
+        ];
+      const imgElement = document.getElementById('cycleImage');
+      const namingElement = document.getElementById('namings');
+      const jobdeskElement = document.getElementById('jobdesk');
+      const cardElement = document.getElementById('cycleCard');
+      let currentIndex = 0;
+      function updateContent(index) {
+        const item = items[index];
+        imgElement.src = item.src;
+        imgElement.alt = item.alt;
+        namingElement.textContent = item.namings;
+        jobdeskElement.textContent = item.jobdesk;
+        cardElement.setAttribute('aria-pressed', 'true');
+      }
+       function cycleContent() {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateContent(currentIndex);
+      }
+      cardElement.addEventListener('click', cycleContent);
+      cardElement.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+          event.preventDefault();
+          cycleContent();
+        }
+      });
+    })();
     </script>  
 
     <footer>

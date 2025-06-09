@@ -4,11 +4,15 @@
     padding:0;
     box-sizing: border-box;
 }
+
 body{
-    height:100dvh; 
+    max-width: 100%;
+    height: 100dvh; 
     width:100dvw;
     font-family: 'Courier New', Courier, monospace;
     background-color: #08a4a3;
+    align-items: center;
+    justify-content: center;
 }
 @font-face {
     font-family: ticketing;
@@ -22,7 +26,7 @@ body{
 }
 .header{
     width: 100%;
-    height: clamp(3.5rem, 8.09vw, 5.663rem);
+    height: clamp(3.5rem, 8.09dvw, 5.663rem);
     background-color: #f3f3f3;
     display: block;
     position: fixed;
@@ -30,12 +34,13 @@ body{
     border-width: 2px;
     border-style: solid;
     border-color: #636363;
+    z-index: 1000;
 }
 .logo{
    position: relative;
    display: inline-block;
    margin-left: clamp(7.2rem, calc(17.7vw + 0.5rem), 20rem);
-   bottom: clamp(3.6rem, 8.9vw, 6.04rem);
+   bottom: clamp(3.6rem, 9vw, 6.75rem);
    width: clamp(2.25rem, 6vw, 5rem);
    height: auto;
     
@@ -141,7 +146,9 @@ nav ul button{
     padding-bottom: 0.5rem;
 }
 
-
+main{
+    margin-top: 10vw;
+}
 .home_bar{
     width: 45%;
     height: clamp(0.30rem,4%,1.5rem);
@@ -172,6 +179,7 @@ nav ul button{
     display: flex;
     margin-left: 2%;
     margin-top: 2vw;
+    margin-bottom: clamp(5rem, 40vw, 10rem);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -242,6 +250,7 @@ nav ul button{
     display: flex;
     margin-left: 53%;
     margin-top: 2vw;
+    margin-bottom: clamp(3rem, 50vw, 10rem);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -284,18 +293,132 @@ nav ul button{
     margin-left: 1rem;
     margin-right: 1rem;
 }
+#poinsettia{
+    height:50vw;
+    width:auto;
+    display: flex;
+    margin-left: 50%;
+    margin-top: 8vw;
+    margin-bottom: clamp(3rem, 50vw, 10rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: clamp(4rem, 7vw, 4rem);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    }
+.additional{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    margin-left: 2%;
+    margin-top: 2vw;
+    margin-bottom: clamp(5rem, 40vw, 10rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: clamp(3.5rem, 5.99vw, 5.663rem);
+    background-color: #636363;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: #636363 0px 0px 5px;
+    border-color: #f4f4f4;
+    border-width: clamp(0.1rem, 1.6vw, 0.2rem);
+    border-style: solid;
+    border-radius: 2px;
+}
+.additional h2{
+    font-size: clamp(2rem, 4.5vw, 5rem);
+    font-family: ticketing;
+    color: #131313;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 3%;
+    margin-left: 3%;
+    line-height: 0.8;
+    background-color: #fff;
+}
+.additional p{
+    font-size: clamp(0.5rem, 2vw, 2rem);
+    font-family: joystix;
+    color: #fff;
+    text-align: center;
+    max-width: 43vw;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 
+.additional_bar{
+    width: 45%;
+    height: clamp(0.30rem,4%,1.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+    top: clamp(4.15rem, 8vw, 7.8rem);
+    font-size: clamp(0.2rem, 1.5vw, 1.2rem);
+    font-family: joystix;
+    color: #fff;
+    background-color: #0000d3;
+    margin-left: 2%;
+    margin-top: 1.5vw;
+    border-color: #f4f4f4;
+    border-width: clamp(0.1rem, 0.5vw, 0.2rem);
+    border-style: solid;
+    border-radius: 2px;
+}
+.additional_bar h3{
+    padding-left: 1%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
 footer{
     width: 100%;
     height: clamp(3.5rem, 8.09vw, 5.663rem);
     background-color: #f3f3f3;
     display: block;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: -110;
     border-width: 2px;
     border-style: solid;
     border-color: #636363;
     text-align: center;
     font-size: clamp(0.5rem, 1vw, 0.8rem);
     font-family: joystix;
+}
+#cycleCard{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 17.5%;
+    top: clamp(35rem, 60vw, 60rem)
+}
+#cycleCard img{
+ aspect-ratio: 3/4;
+ object-fit: cover;
+ height: 20vw;
+ left:5%;
+}
+
+#cycleCard img:hover{
+filter: brightness(130%);
+}
+
+#cycleCard p{
+    text-align: left;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(0.7rem, 2vw, 2rem);
+    margin-right: min(16px,2rem);
 }
