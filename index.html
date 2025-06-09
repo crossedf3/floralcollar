@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>floralcollar!</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body,html{
+        height: 100%;
+        margin: 0;
+        background-color: #08a4a3;
+    }
+    body{
+        display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    padding: 1.5rem;         /* breathing room on small screens */
+  }
+   main {
+    max-width: var(--max-width);
+    width: 100%;
+    text-align: center;
+  }
+     img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 12px 30px var(--shadow-color);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  img:hover, img:focus {
+    transform: scale(1.05);
+    outline: none;
+  }
+     
+</style>
+</head>
+<body>
+    <main>
+    <img src="floralcollar.png" alt="logo" class="logo">
+    </main>
+    <script>
+        (() => {
+        document.querySelector('.logo').addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+     })();
+    </script>
+</body>
+</html>
