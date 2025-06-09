@@ -64,6 +64,11 @@ body{
     position:relative;
     top: clamp(0.8rem, 1.3dvh, 1.5rem);
 }
+@media (max-width:926px){
+    .subtitle{
+        display: none;
+    }
+}
 nav{
     display: flex;
     justify-content: right;
