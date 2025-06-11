@@ -6,6 +6,89 @@
     <title>floralcollar!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body,html{
+        height: 100%;
+        margin: 0;
+        background-color: #08a4a3;
+    }
+    .prodabout_bar{
+    width: 45%;
+    height: clamp(0.30rem,4%,1.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+    top: clamp(3.75rem, 0.8vw, 5rem);
+    font-size: clamp(0.2rem, 1.6vw, 2rem);
+    font-family: joystix;
+    color: #fff;
+    background-color: #0000d3;
+    margin-left: 27.5%;
+    margin-top: 1.5vw;
+    border-color: #f4f4f4;
+    border-width: clamp(0.1rem, 0.5vw, 0.2rem);
+    border-style: solid;
+    border-radius: 2px;
+}
+.prodabout_bar h3{
+    padding-left: 1%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+.prodabout{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    margin-left: 27.5%;
+    margin-top: 2vw;
+    margin-bottom: clamp(3rem, 50vw, 10rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: clamp(2rem, 1vw, 4rem);
+    background-color: #636363;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: #636363 0px 0px 5px;
+    border-color: #f4f4f4;
+    border-width: clamp(0.1rem, 0.5vw, 0.2rem);
+    border-style: solid;
+    border-radius: 2px;
+}
+.prodabout h2{
+    padding-right: 21.5%;
+    padding-left: 21.5%;
+    font-size: clamp(2rem, 4.5vw, 5rem);
+    font-family: ticketing;
+    color: #131313;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-right: 3%;
+    margin-left: 3%;
+    line-height: 0.8;
+    background-color: #fff;
+}
+.prodabout p{
+    font-size: clamp(0.5rem, 2vw, 2rem);
+    font-family: joystix;
+    color: #fff;
+    text-align: center;
+    max-width: 43vw;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+</style>
 </head>
 <body>
     <header class="header">
@@ -22,16 +105,21 @@
     </header>
 
     <main>
-        <section id="home">
-            <h2>Welcome to Our Passion Project!</h2>
-            <p>...no we don't do cleaning and stuff but we do love nature!</p>
-        </section>
+        <div class="prodabout_bar">
+                <h3>product.exe</h3>
+            </div>
+        </div>
+            <div class="prodabout">
+            <h2>Check it out!</h2>
+            <p>Thank you for your time!</p>
+            <p>Until next time!</p>
+            </div>
+        <div id="prod-home">
+            <button class="raw-code">RAW CODE (COLAB)</button>
+            <img src="floralcollar.png" alt="prod logo" class="prod-logo">
+            <button class="gradio">GRADIO INTERFACE</button>
+        </div>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>what's that powerful scent? roses? jasmines? no! it's Biel's body odor! /jk.</p>
-            <p>Who's who? well, let us introduce ourselves!</p>
-        </section>
 
     <script>
         document.querySelector('.home_button').addEventListener('click', function() {
@@ -45,9 +133,15 @@
         document.querySelector('.product_button').addEventListener('click', function() {
             window.location.href = 'product.html';
         });
+        document.querySelector('.raw-code').addEventListener('click', function() {
+            window.location.href = 'https://colab.research.google.com/drive/1_oVgecUNgAxumATwt68cjvosNiO_TBCd?usp=sharing';
+        });
+        document.querySelector('.gradio').addEventListener('click', function() {
+            window.location.href = 'https://c11491cfac22a6aa3b.gradio.live/';
+        });
     </script>  
 
-    <footer>
-        <p>&copy; 2023 floralcollar! All rights reserved.</p>
+    <footer class="prod-footer">
+        <p >&copy; 2023 floralcollar! All rights reserved.</p>
     </footer>
 </body>
